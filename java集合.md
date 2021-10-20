@@ -61,6 +61,7 @@ put方法详解：![img](https://upload-images.jianshu.io/upload_images/18871813
 4. 线程不安全，性能是最好的。
 5. 作为key的对象，必须实现hashcode和equals方法
 6. remove():返回boolean
+7. map.getOrDefault(key, value): 如果map中有这个key，则返回map中key对应的值，否则返回value这个默认值
 
 Iterator : 迭代器，用来遍历集合
 
