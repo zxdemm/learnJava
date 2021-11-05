@@ -33,3 +33,26 @@ ApplicationContext app = new ClassPathXmlApplicationContext("applicationContext.
 <img src="C:\Users\HDULAB601\AppData\Roaming\Typora\typora-user-images\image-20211103164651074.png" alt="image-20211103164651074" style="zoom:67%;" />
 
 <img src="C:\Users\HDULAB601\AppData\Roaming\Typora\typora-user-images\image-20211103165552897.png" alt="image-20211103165552897" style="zoom:67%;" />
+
+## bean实例的三种方法：
+
+* 无参构造方式：上述就是
+
+* 工厂静态方法：
+
+  ```
+  静态工厂创建方式-->
+  <bean id = "userDao" class="Factory.Factory" factory-method="getUserImpl" scope="prototype"></bean>
+  ```
+
+  
+
+* 工厂动态方法
+
+  ```
+  <bean id = "dynamicFactory" class="Factory.DynamicFactory" ></bean>
+  程序中get userDao就行
+   <bean id = "userDao" factory-bean="dynamicFactory" factory-method="getUserDaoimpl"></bean>
+  ```
+
+  
